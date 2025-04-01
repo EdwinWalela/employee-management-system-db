@@ -22,6 +22,12 @@ CREATE TABLE employees(
   FOREIGN KEY (manager_id) REFERENCES employees(id) ON DELETE SET NULL
 );
 
+CREATE INDEX idx_employees_start_date ON employees(start_date);
+CREATE INDEX idx_employees_department ON employees(department_id);
+CREATE INDEX idx_employees_name ON employees(name);
+CREATE INDEX idx_employees_salary ON employees(salary DESC);
+
+
 INSERT INTO departments (name)
 VALUES ('engineering'),('marketing'),('hr'),('sales'),('finance');
 
