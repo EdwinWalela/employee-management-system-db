@@ -26,8 +26,11 @@ Load the schema (`schema.sql`) to a Postgres database
 psql -U <db-user> -p 5432 -h localhost -f schema.sql -f functions.sql  <db-name>
 ```
 
-Alternatively, a live database can be accesed through a hosted DB (URL on request)
+Alternatively, a live database can be accesed through a hosted DB (credentials on request)
 
+```bash
+psql -U <user-name> -h <host> -p <port> <db-name>
+```
 
 ## Performance Optimization
 
