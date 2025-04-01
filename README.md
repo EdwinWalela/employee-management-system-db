@@ -1,27 +1,29 @@
 # Employee Management System Database
 
+
+## Entity Relationship Diagram
+The project consists of 3 entities:
+- Departments
+- Roles
+- Employees
+
+![erd](./erd.png)
+
 ## Local setup
 
 The database requires Postgres 13 and above
 
+Create a database on Postgres DB
+
+```psql
+CREATE database <db-name>
+```
 
 
 Load the schema (`schema.sql`) to a Postgres database
 
 ```bash
-psql -f schemadump.sql -p port -U username dbname
-```
-
-Load the data using `queries.sql`
-
-```bash
-psql -f schemadump.sql -p port -U username dbname
-```
-
-Load stored functions using `funtions.sql`
-
-```bash
-psql -f schemadump.sql -p port -U username dbname
+psql -U <db-user> -p 5432 -h localhost -f schema.sql -f functions.sql  <db-name>
 ```
 
 Alternatively, a live database can be accesed through a hosted DB (URL on request)
